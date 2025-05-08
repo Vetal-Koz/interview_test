@@ -18,7 +18,7 @@ public class EmployeeService : IEmployeeService
         _mapper = mapper;
     }
 
-    public async Task<EmployeeWrapper> GetEmplyeeByID(int id)
+    public async Task<EmployeeWrapper> GetEmployeeByID(int id)
     {
         Employee? employee = await _employeeRepository.GetEmployeeByID(id);
 

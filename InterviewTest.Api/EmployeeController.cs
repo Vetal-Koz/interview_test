@@ -18,7 +18,7 @@ namespace InterviewTest.Api
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployeeById([FromRoute] int id)
         {
-            EmployeeWrapper employee = await _employeeService.GetEmplyeeByID(id);
+            EmployeeWrapper employee = await _employeeService.GetEmployeeByID(id);
 
             return Ok(employee);
         }
