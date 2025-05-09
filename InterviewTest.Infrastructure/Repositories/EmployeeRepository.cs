@@ -70,6 +70,7 @@ public class EmployeeRepository : IEmployeeRepository
             SqlParameter parameter = new SqlParameter("@id", SqlDbType.Int);
             parameter.Value = id;
 
+            command.Parameters.Add(enableParameter);
             command.Parameters.Add(parameter);
 
             await command.ExecuteNonQueryAsync();
